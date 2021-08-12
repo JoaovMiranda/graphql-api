@@ -1,26 +1,43 @@
+# API with Graphql
 
-A SIMPLE API MADE WITH GRAPHQL AND KNEX.js
+A simple API made with Graphql and knex.js.
 
-to run project: node server.js
+## Run
 
-to test:
+```bash
+npm run start
+``` 
+
+## Usage
+
+```javascript
+// To create a new user:
+mutation {
+  createUser(
+    input: {
+      name: "example"
+      email: "example.com"
+      password: "123456"
+    }
+  ) { id name }
+}
+
+// To get users:
 {
-   getUsers{
+   getUsers {
      name email id
    }
  
-   getUser(id: 2){
+   getUser(id: 2) {
      email
    }
 }
+```
 
-mutation{
-  createUser(input: {
-    name: "batata"
-    email: "batata.com"
-    password: "123456"
-  }) {
-    id
-    name
-  }
-}
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

@@ -1,10 +1,6 @@
-
-const { password } = require('./.env')
-
+const { password } = require('./.env');
 
 module.exports = {
-
-
   client: 'mysql',
   connection: {
     database: 'graphql',
@@ -18,5 +14,4 @@ module.exports = {
   migrations: {
     tableName: 'knex_migrations'
   }
-
 };

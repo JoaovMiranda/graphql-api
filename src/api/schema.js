@@ -1,4 +1,4 @@
-const resolvers = require ('./resolvers')
+const resolvers = require('./resolvers')
 const { makeExecutableSchema } = require('graphql-tools')
 
 const usersAttribs = `
@@ -24,7 +24,7 @@ const typeDefs = `
     }
 `
 
-module.exports = makeExecutableSchema({ 
+module.exports = makeExecutableSchema({
     typeDefs,
     resolvers
 })
